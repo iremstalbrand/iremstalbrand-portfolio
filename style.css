@@ -75,7 +75,7 @@ textarea:not([rows]) {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight:500;
   line-height: 2rem;
   color:rgba(224, 236, 232, 0.8);
@@ -93,7 +93,7 @@ body {
 }
 h1,h2,h3 {
   font-family: "Merriweather", serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 html, body {
   height: 100%;
@@ -106,7 +106,7 @@ footer {
   margin-top: auto;
 }
 .page-title {
-  font-size: 1.5rem;
+  font-size: 1.3em;
 }
 .title {
   display: flex;
@@ -130,11 +130,11 @@ nav ul {
   list-style: none; /*default liste gorunumunu kaldiriyor*/
   margin: 0;
   padding: 0;
-  font-size: 1rem;
   font-family:"Merriweather", serif;
 }
 nav ul li a {
   text-decoration: none; /*default alti cizili goruntuyu kaldiriyor*/
+  font-size: 0.8rem;
 }
 nav ul li a:hover {
   color: rgba(236, 233, 224, 0.8);
@@ -153,7 +153,7 @@ nav ul li a:hover {
   margin-top: 1.5rem;
 }
 .about-info {
-  max-width: 60rem;
+  max-width: 45rem;
   text-align: justify;        
   text-align-last: center; 
 }
@@ -187,8 +187,8 @@ nav ul li a:hover {
   padding-bottom: 3rem;
 }
 .skill-icon {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
   padding: 0.5rem;  /*border ve ikon arasi bosluk*/
   border: 0.5px solid  rgba(224, 236, 232, 0.8);
   border-radius: 50%;
@@ -252,7 +252,7 @@ nav ul li a:hover {
   padding: 2rem 1rem 3rem 1rem;
 }
 .projects-title { 
-  font-size: 2.25rem; 
+  font-size: 2rem; 
   padding-top: 5rem; 
   margin: 0 auto; 
 } 
@@ -271,7 +271,7 @@ nav ul li a:hover {
 }
 .card {
   position: relative;
-  width: 27rem;
+  width: 22rem;
   max-width: 100%;
   height: 32rem; 
   display: flex;
@@ -345,8 +345,8 @@ nav ul li a:hover {
   border-radius: 0.3rem;
 }
 .artwork-card {
-  width: 25rem;
-  height: 25rem;
+  width: 20rem;
+  height: 20rem;
   display: flex;
   justify-content: center; 
   align-items: center;    
@@ -360,7 +360,7 @@ nav ul li a:hover {
   transform: scale(1.2);
 }
 .artwork-title {
-  font-size: 2.25rem;
+  font-size: 2rem;
   padding-top: 5rem;
   margin: 0 auto;
 }
@@ -376,13 +376,14 @@ nav ul li a:hover {
 .footer-container {
   text-align: center;
   background-color: rgba(42, 42, 42, 0.5);
-  font-size: 1rem;
   font-family: "Merriweather", serif;
   border-top: 1px solid rgba(224, 236, 232, 0.5);
 }
+.footer-container p {
+  font-size: 0.8rem;
+}
 .footer-container h2 {
-  font-size: 1.3rem;
-  font-weight: lighter;
+  font-size: 1rem;
 }
 .contact-icons {
   display: flex;
@@ -397,14 +398,13 @@ nav ul li a:hover {
   gap:0.5rem;
   color: rgba(224, 236, 232, 0.8);
   text-decoration: none;
-  padding: 0.3125rem 1rem; 
   border: solid;
   border-color: rgba(224, 236, 232, 0.8);
   border-radius: 0.5rem;
 }
 .footer-icon {
-  width: 1.4rem;
-  height: 1.4rem; 
+  width: 1rem;
+  height: 1rem; 
   display: inline-block;
 }
 .contact-link:hover {
@@ -412,13 +412,6 @@ nav ul li a:hover {
   cursor:pointer;
   background-color:rgba(158, 58, 68, 0.5);
   box-shadow: 0 0 1.25rem 0.5rem rgba(224, 236, 232, 0.03);
-}
-.footer-container {
-  padding: 0.5rem 2%;
-  text-align: center;
-  background-color: rgba(42, 42, 42, 0.5);
-  font-size: 1rem;
-  font-family: "Merriweather", serif;
 }
 .contact-icons {
   display: flex;
@@ -432,21 +425,21 @@ nav ul li a:hover {
   gap:0.5rem;
   color: rgba(224, 236, 232, 0.8);
   text-decoration: none;
-  padding: 0.3125rem 1rem; 
-  border: solid;
-  border-color: rgba(224, 236, 232, 0.8);
+  padding: 0.2rem 1rem; 
+  border: 0.5px solid rgba(224, 236, 232, 0.8);
   border-radius: 0.5rem;
   transition: transform 0.2s ease;
-}
-.footer-icon {
-  width: 1.4rem;
-  height: 1.4rem; 
+  font-size: 0.8rem;
 }
 .contact-link:hover {
   transform: scale(1.05);
   cursor:pointer;
   background-color:rgba(158, 58, 68, 0.5);
   box-shadow: 0 0 1.25rem 0.5rem rgba(224, 236, 232, 0.03);
+}
+.copyright {
+  font-size: 0.9rem;
+  vertical-align: middle;
 }
 html {
   scroll-behavior: smooth;
@@ -481,7 +474,6 @@ html {
     gap: 1.5rem;
     flex-wrap: wrap;
   }
-
   /* Hobbies */
   .hobbies {
     grid-template-columns: repeat(2, 1fr);
@@ -573,7 +565,7 @@ html {
   nav ul {
     flex-direction: column;
     gap: 0.7rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   nav ul li a {
     width: 100%;
@@ -630,6 +622,15 @@ html {
     gap: 1.5rem;
     padding: 1rem;
   }
+  .projects-description {
+    font-size: 0.9rem; 
+    line-height: 1.4rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
   .card {
     width: 100%;
     height: 28rem;
@@ -666,7 +667,7 @@ html {
     padding-top: 2rem;
   }
   .artwork-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     max-width: 95%;
     margin: 0 auto;
     padding: 0.5rem 0 1.5rem 0;
@@ -675,10 +676,10 @@ html {
   /* Footer */
   .footer-container {
     padding: 0.5rem 1%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .footer-container h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .contact-icons {
     gap: 0.8rem;
@@ -693,7 +694,8 @@ html {
     width: 1rem;
     height: 1rem;
   }
-
+  .copyright {
+  font-size: 0.8rem;
+  vertical-align: middle;
 }
-
-
+}
