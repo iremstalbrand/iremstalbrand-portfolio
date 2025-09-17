@@ -440,8 +440,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/*ipad header */
-@media (max-width: 1024px) {
+/*TABLET (481px - 1024px)*/
+@media (max-width: 1024px) and (min-width: 481px) {
+
+  /* Header */
   header {
     flex-direction: column;
     align-items: center;
@@ -449,254 +451,86 @@ html {
     gap: 0.5rem;
   }
   nav ul {
+    flex-direction: row;
     gap: 1rem;
     font-size: 0.95rem;
   }
-}
-/*mobile header */
-@media (max-width: 480px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 2%;
-    gap: 0.5rem;
-  }
 
-  nav ul {
-    flex-direction: column;
-    gap: 0.7rem;
-    font-size: 0.85rem;
-  }
-
-  nav ul li a {
-    text-align: center;
-    width: 100%;
-  }
-}
-/* ipad aboutme-skills*/
-@media (min-width: 481px) and (max-width: 1024px) {
-  body {
-    min-height: auto;
-    height: auto;
-  }
+  /* About Me */
   .about-container {
     padding: 3rem 5% 0 5%;
-    margin-bottom: 0;
     gap: 1.5rem;
   }
-  .skills {
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-}
-/* mobile about me */
-@media (max-width: 480px) {
-  .about-container {
-    padding: 2rem 5%;
-    gap: 1rem;
-  }
-
-  .about-info {
-    max-width: 100%;
-    font-size: 0.9rem;
-    line-height: 1.4rem;
-    text-align: justify; 
-  }
-
   .profile-picture {
-    width: 12rem;
-    height: 12rem;
+    max-width: 16rem;
+    height: auto;
   }
-
   .skills {
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 1rem;
   }
 
-  .skill-icon {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.2rem;
-    box-shadow: 0 0 0.2rem rgba(224, 236, 232, 0.2);
-  }
-}
-/* ipad hobbies */
-@media (max-width: 1024px) {
-  .hobbies-container p {
-    font-size: 1rem;
-  }
-
+  /* Hobbies */
   .hobbies {
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-
   .hobbies > div {
     width: 8rem;
     height: 8rem;
   }
-
   .hobby-icon {
     width: 2.5rem;
     height: 2.5rem;
   }
-
   .hobbies p {
     font-size: 0.9rem;
   }
-}
-/* mobile hobbies */
-@media (max-width: 480px) {
-  .hobbies {
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* 2 sütun */
-    justify-content: center; /* ortala */
-    gap: 1.5rem;
-    padding-bottom: 2rem;
-  }
 
-  .hobbies > div {
-    margin: 0.5rem;
-  }
-
-  .hobbies-container p {
-    font-size: 0.85rem;
-    text-align: center;
-    margin: 0;
-  }
-}
-/* ipad projects*/
-@media (max-width: 1024px) {
-  .section-description {
-    max-width: 30rem;
-    font-size: 1.05rem;
-  }
-  .projects-title {
-    font-size: 1.8rem;
-  }
-  .projects-description {
-    max-width: 35rem;
-    font-size: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
+  /* Projects */
   .projects-container {
     gap: 2rem;
     padding: 1.5rem 1rem 2rem 1rem;
   }
   .card {
-    height:auto;
-    min-height:28rem;
+    width: 48%;
+    height: auto;
+    min-height: 28rem;
   }
   .card img {
     height: auto;
   }
   .card p {
     font-size: 0.95rem;
-    padding: 1rem 2rem; /* sağ-sol padding azaltıldı */
+    padding: 1rem 2rem;
   }
   .project-button {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
-    margin-top: 1rem;
   }
-}
-/* mobile projects */
-@media (max-width: 480px) {
-  .section-description {
-    max-width: 20rem;
-    font-size: 0.95rem;
-  }
-  .projects-title {
-    font-size: 1.5rem;
-  }
-  .projects-description {
-    max-width: 18rem;
-    font-size: 0.9rem;
-    padding-top: 0.5rem;
-    padding-bottom: 1.5rem;
-  }
-  .projects-container {
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-  .card {
-    width: 100%;
-    max-width: 100%;
-    height: 28rem;
-  }
-  .card img {
-    height: 18rem;
-  }
-  .card p {
-    font-size: 0.9rem;
-    padding: 1rem 1.5rem;
-  }
-  .project-button {
-    font-size: 0.85rem;
-    padding: 0.35rem 0.7rem;
-    margin-top: 0.8rem;
-  }
-}
-/* ipad artworks */
-@media (max-width: 1024px) {
+
+  /* Artwork */
   .artwork-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolon */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 0 2rem 5rem 2rem;
   }
-
   .artwork-card {
-    width: 100%;       /* kapsayıcıya uyumlu olsun */
-    max-width: 22rem;  /* çok büyük olmasın */
-    height: auto;      /* yükseklik içeriğe uyumlu */
+    max-width: 22rem;
+    width: 100%;
+    height: auto;
   }
-
   .artwork-title {
     font-size: 1.8rem;
   }
-
   .artwork-description {
     font-size: 1rem;
     max-width: 90%;
     margin: 0 auto;
     padding: 1rem 0 2rem 0;
   }
-}
-/* mobile arworks */
-@media (max-width: 480px) {
-  .artwork-container {
-    grid-template-columns: 1fr; /* tek kolon */
-    gap: 1.5rem;
-    padding: 0 1rem 3rem 1rem;
-  }
 
-  .artwork-card {
-    width: 100%;       /* ekran genişliğini kaplasın */
-    max-width: 100%;   /* taşmayı engelle */
-    height: auto;
-  }
-
-  .artwork-title {
-    font-size: 1.5rem;
-    padding-top: 2rem;
-  }
-
-  .artwork-description {
-    font-size: 0.95rem;
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 0.5rem 0 1.5rem 0;
-  }
-  .artwork-card:hover {
-    transform: none;
-  }
-}
-/* ipad footer */
-@media (max-width: 1024px) {
+  /* Footer */
   .footer-container {
     padding: 0.5rem 1.5%;
     font-size: 0.95rem;
@@ -711,9 +545,120 @@ html {
     width: 1.2rem;
     height: 1.2rem;
   }
+
 }
-/* mobile footer */
-@media (max-width: 768px) {
+
+/* MOBILE (0 - 480px)*/
+@media (max-width: 480px) {
+
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 2%;
+    gap: 0.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.7rem;
+    font-size: 0.85rem;
+  }
+  nav ul li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* About Me */
+  .about-container {
+    padding: 2rem 5%;
+    gap: 1rem;
+  }
+  .about-info {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    text-align: justify; 
+  }
+  .profile-picture {
+    max-width: 12rem;
+    height: auto;
+  }
+  .skills {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .skill-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.2rem;
+    box-shadow: 0 0 0.2rem rgba(224, 236, 232, 0.2);
+  }
+
+  /* Hobbies */
+  .hobbies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .hobbies > div {
+    margin: 0.5rem;
+  }
+  .hobbies-container p {
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Projects */
+  .projects-container {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .card {
+    width: 100%;
+    height: 28rem;
+  }
+  .card img {
+    height: 18rem;
+  }
+  .card p {
+    font-size: 0.9rem;
+    padding: 1rem 1.5rem;
+  }
+  .project-button {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    margin-top: 0.8rem;
+  }
+
+  /* Artwork */
+  .artwork-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem 3rem 1rem;
+  }
+  .artwork-card {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  .artwork-card:hover {
+    transform: none;
+  }
+  .artwork-title {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+  }
+  .artwork-description {
+    font-size: 0.95rem;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0.5rem 0 1.5rem 0;
+  }
+
+  /* Footer */
   .footer-container {
     padding: 0.5rem 1%;
     font-size: 0.9rem;
@@ -734,4 +679,5 @@ html {
     width: 1rem;
     height: 1rem;
   }
+
 }
