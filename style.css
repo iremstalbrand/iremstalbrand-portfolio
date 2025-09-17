@@ -436,7 +436,6 @@ nav ul li a:hover {
   background-color:rgba(158, 58, 68, 0.5);
   box-shadow: 0 0 1.25rem 0.5rem rgba(224, 236, 232, 0.03);
 }
-
 html {
   scroll-behavior: smooth;
 }
