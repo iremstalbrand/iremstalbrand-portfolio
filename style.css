@@ -73,7 +73,6 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
@@ -83,15 +82,28 @@ body {
   background-color: rgb(27, 27, 27);
   margin: 0; /* bosluklari sifirliyoruz, daha serbest layout icin */
   padding: 0; /* bosluklari sifirliyoruz, daha serbest layout icin */
-  background-image: url('./icons-images/background03.png');
+  background-image: url(./icons-images/background03.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /*arka plan kaydirdiginda sabit kaliyor */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 h1,h2,h3 {
   font-family: "Merriweather", serif;
   font-weight: 600;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+main {
+  flex: 1; /* içerik alanı footer’ı yukarıya iter */
+}
+footer {
+  margin-top: auto;
 }
 .page-title {
   font-size: 1.5rem;
@@ -440,7 +452,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/*TABLET (481px - 1024px)*/
+/* TABLET */
 @media (max-width: 1024px) and (min-width: 481px) {
 
   /* Header */
@@ -514,6 +526,7 @@ html {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 0 2rem 5rem 2rem;
+    justify-items: center;
   }
   .artwork-card {
     max-width: 22rem;
@@ -547,8 +560,7 @@ html {
   }
 
 }
-
-/* MOBILE (0 - 480px)*/
+/* MOBILE */
 @media (max-width: 480px) {
 
   /* Header */
@@ -601,9 +613,11 @@ html {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     padding-bottom: 2rem;
+    justify-items: center;
   }
   .hobbies > div {
     margin: 0.5rem;
+   
   }
   .hobbies-container p {
     font-size: 0.85rem;
@@ -681,3 +695,5 @@ html {
   }
 
 }
+
+
